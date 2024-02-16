@@ -21,7 +21,7 @@ def update_env_variable(variable_name, new_value):
         with open(find_dotenv(), 'w') as file:
             file.writelines(lines)
 
-        print(f"{variable_name} updated successfully.")
+        print(f"{variable_name} updated successfully: {new_value}")
     except Exception as e:
         print(f"Error updating {variable_name}: {e}")
 
@@ -42,7 +42,3 @@ def download_audio(url, output_path='media'):
         update_env_variable("YOUTUBE_VIDEO_TITLE", yt.title)
     except Exception as e:
         print(f"Error: {e}")
-
-
-video_url = os.getenv("YOUTUBE_URL_VIDEO")
-download_audio(video_url, os.getenv("MEDIA_MP4_FOLDER"))
