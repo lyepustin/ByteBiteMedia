@@ -11,6 +11,6 @@ video_url = os.getenv("YOUTUBE_URL_VIDEO")
 song_title = download_audio(video_url, os.getenv("MEDIA_MP4_FOLDER"))
 convert_mp4_to_wav(song_title)
 
-win_lengths = [30, 60, 90]
-min_lengths = [1]
+win_lengths = [1]
+min_lengths = [30, 60, 80]
 process_audio_data(song_title, win_lengths, min_lengths)
