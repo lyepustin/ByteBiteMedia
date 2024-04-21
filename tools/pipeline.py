@@ -12,5 +12,5 @@ song_title = download_audio(video_url, os.getenv("MEDIA_MP4_FOLDER"))
 convert_mp4_to_wav(song_title)
 
 win_lengths = [1]
-min_lengths = [30, 60, 80]
+min_lengths = [10, 20, 30, 40, 60, 90]
 process_audio_data(song_title, win_lengths, min_lengths)
